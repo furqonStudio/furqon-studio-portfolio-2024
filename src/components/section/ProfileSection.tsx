@@ -19,7 +19,7 @@ export const ProfileSection = () => {
         <p className="font-inter">Software Engineer</p>
       </div>
       <div className="space-y-4">
-        <div className="w-full aspect-square bg-yellow-300 rounded-3xl" />
+        <div className="w-full aspect-square bg-yellow-300 rounded-2xl" />
         <CustomButton text="Contact Me" />
       </div>
       <div className="space-y-2 text-center ">
