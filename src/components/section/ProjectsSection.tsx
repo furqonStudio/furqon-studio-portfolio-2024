@@ -6,19 +6,21 @@ export const ProjectSection = () => {
   return (
     <section className="section-style">
       <SectionTitle text="Project" />
-      <ProjectCard
-        image="/img.jpg"
-        title="Prelovnes"
-        description="UNNES preloved marketplace mobile"
-        textDark
-        bgColor="bg-red-500"
-      />
-      <ProjectCard
-        image="/img.jpg"
-        title="Prelovnes"
-        description="UNNES preloved marketplace mobile"
-        textDark
-      />
+      <div className="flex flex-col gap-4">
+        <ProjectCard
+          image="/img.jpg"
+          title="Prelovnes"
+          description="UNNES preloved marketplace mobile"
+          textDark
+          bgColor="bg-red-500"
+        />
+        <ProjectCard
+          image="/img.jpg"
+          title="Prelovnes"
+          description="UNNES preloved marketplace mobile"
+          textDark
+        />
+      </div>
     </section>
   )
 }
