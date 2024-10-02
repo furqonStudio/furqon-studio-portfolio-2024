@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Gasoek_One, Inter } from 'next/font/google'
 import './globals.css'
+import { BottomNavbar } from '@/components/molecules/BottomNavbar'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const gasoek = Gasoek_One({
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${gasoek.variable} bg-black`}>
         {children}
+        <BottomNavbar />
       </body>
     </html>
   )
