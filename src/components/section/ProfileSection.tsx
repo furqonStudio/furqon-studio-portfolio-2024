@@ -1,5 +1,4 @@
-import React from 'react'
-
+import Image from 'next/image'
 import { CustomButton } from '../atomic/CustomButton'
 import { SocialMedia } from '../molecules/SocialMedia'
 
@@ -15,7 +14,13 @@ export const ProfileSection = () => {
         <p className="font-inter">Software Engineer</p>
       </div>
       <div className="space-y-4">
-        <div className="w-full aspect-square bg-yellow-300 rounded-2xl" />
+        <Image
+          alt="furqon-al-rasyid"
+          src={'/assets/furqon-avatar.png'}
+          width={400}
+          height={400}
+          className="m-auto"
+        />
         <CustomButton text="Contact Me" />
       </div>
       <div className="space-y-2 text-center ">

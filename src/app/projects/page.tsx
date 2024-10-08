@@ -1,5 +1,5 @@
-import React from 'react'
-
-export const ProjectsPage = () => {
+const ProjectsPage = () => {
   return <div>ProjectsPage</div>
 }
+
+export default ProjectsPage
