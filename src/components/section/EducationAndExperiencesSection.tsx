@@ -5,7 +5,7 @@ import {
 } from '@/data/data'
 import Image from 'next/image'
 import { SectionTitle } from '../atomic/SectionTitle'
-import { TimelineCard } from '../molecules/TimelineCard'
+import { Timelines } from '../molecules/Timelines'
 
 export const EducationAndExperiencesSection = () => {
   return (
@@ -16,14 +16,14 @@ export const EducationAndExperiencesSection = () => {
           <Image
             src={'/assets/icons/education.png'}
             alt="education"
-            width={50}
-            height={50}
+            width={48}
+            height={48}
           />
-          <p className="text-white text-lg font-gasoek text-center">
+          <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
             Education
           </p>
         </div>
-        <TimelineCard timelines={educationTimelines} />
+        <Timelines timelines={educationTimelines} />
       </div>
       <div>
         <div className="flex flex-row items-center justify-center gap-2">
@@ -33,11 +33,11 @@ export const EducationAndExperiencesSection = () => {
             width={50}
             height={50}
           />
-          <p className="text-white text-lg font-gasoek text-center">
+          <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
             Certifications
           </p>
         </div>
-        <TimelineCard timelines={certificationTimelines} />
+        <Timelines timelines={certificationTimelines} />
       </div>
       <div>
         <div className="flex flex-row items-center justify-center gap-2">
@@ -47,11 +47,11 @@ export const EducationAndExperiencesSection = () => {
             width={50}
             height={50}
           />
-          <p className="text-white text-lg font-gasoek text-center">
+          <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
             Experiences
           </p>
         </div>
-        <TimelineCard timelines={workExperienceTimelines} />
+        <Timelines timelines={workExperienceTimelines} />
       </div>
     </section>
   )
