@@ -18,10 +18,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Link href={'/projects'}>
-      <div className={`${bgColor} p-4 rounded-2xl space-y-2`}>
+      <div className={`${bgColor}  p-4 rounded-2xl space-y-2`}>
         <div>
           <h3
-            className={`font-inter font-bold tracking-tighter text-lg -mb-1 ${
+            className={`font-inter font-bold tracking-tight text-lg -mb-1 ${
               textDark ? 'text-gray-900' : 'text-white'
             }`}
           >
