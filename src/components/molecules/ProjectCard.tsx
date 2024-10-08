@@ -19,7 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Link href={'/projects'}>
       <div
-        className={`${bgColor}  p-4 rounded-2xl space-y-2 hover:scale-95 transition ease-in-out duration-700`}
+        className={`${bgColor}  p-4 rounded-2xl space-y-2 hover:scale-95 transition ease-in-out duration-700 w-fit`}
       >
         <div>
           <h3

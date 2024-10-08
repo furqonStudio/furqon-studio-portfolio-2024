@@ -31,7 +31,7 @@ export const ProjectSection = () => {
   return (
     <section className="section-style">
       <SectionTitle text="Project" />
-      <div className="flex flex-col gap-4">
+      <div className=" gap-4 grid md:grid-cols-2">
         {Projects.map((project) => (
           <ProjectCard
             key={project.id}
