@@ -13,7 +13,7 @@ export const SkillsSection = () => {
             key={skill.id}
           >
             <Image alt="skill" src={skill.imageUrl} width={300} height={300} />
-            <p className="font-inter font-bold text-white tracking-tight">
+            <p className="font-inter font-bold text-white tracking-tight 2xl:text-xl">
               {skill.name}
             </p>
           </div>

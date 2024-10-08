@@ -21,7 +21,7 @@ export const EducationAndExperiencesSection = () => {
                 width={48}
                 height={48}
               />
-              <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
+              <p className="2xl:text-2xl text-white text-lg font-inter font-black tracking-tighter text-center">
                 Education
               </p>
             </div>
@@ -35,7 +35,7 @@ export const EducationAndExperiencesSection = () => {
                 width={50}
                 height={50}
               />
-              <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
+              <p className="2xl:text-2xl text-white text-lg font-inter font-black tracking-tighter text-center">
                 Certifications
               </p>
             </div>
@@ -50,7 +50,7 @@ export const EducationAndExperiencesSection = () => {
               width={50}
               height={50}
             />
-            <p className="text-white text-lg font-inter font-black tracking-tighter text-center">
+            <p className="2xl:text-2xl text-white text-lg font-inter font-black tracking-tighter text-center">
               Experiences
             </p>
           </div>

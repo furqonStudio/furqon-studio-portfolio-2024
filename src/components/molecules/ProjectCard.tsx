@@ -23,14 +23,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         <div>
           <h3
-            className={`font-inter font-bold tracking-tight text-lg -mb-1 ${
+            className={`2xl:text-3xl font-inter font-bold tracking-tight text-lg -mb-1 ${
               textDark ? 'text-gray-900' : 'text-white'
             }`}
           >
             {title}
           </h3>
           <p
-            className={`font-inter text-sm ${
+            className={`2xl:text-xl font-inter text-sm ${
               textDark ? 'text-gray-800' : 'text-gray-200'
             }`}
           >
