@@ -19,7 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Link href={'/projects'}>
       <div
-        className={`${bgColor}  p-4 rounded-2xl space-y-2 hover:scale-95 transition ease-in-out duration-700 w-fit`}
+        className={`${bgColor}  p-4 rounded-2xl space-y-2 hover:scale-95 transition ease-in-out duration-700 lg:w-full`}
       >
         <div>
           <h3
@@ -37,13 +37,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {description}
           </p>
         </div>
-        <Image
-          src={image}
-          width={426}
-          height={233}
-          alt="project-thumbnail"
-          className="rounded-xl"
-        />
+        <div className="relative w-full aspect-[16/9]">
+          <Image
+            src={image}
+            alt="project-thumbnail"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-xl"
+          />
+        </div>
       </div>
     </Link>
   )

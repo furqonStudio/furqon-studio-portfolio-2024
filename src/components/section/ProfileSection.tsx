@@ -4,7 +4,7 @@ import { SocialMedia } from '../molecules/SocialMedia'
 
 export const ProfileSection = () => {
   return (
-    <section className="section-style">
+    <section className="lg:mr-0 section-style ">
       <div className="text-white text-center">
         <p className="font-gasoek text-4xl">
           FURQON

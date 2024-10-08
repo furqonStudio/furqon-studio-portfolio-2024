@@ -1,5 +1,5 @@
 'use client'
-import { BottomNavbar } from '@/components/molecules/BottomNavbar'
+
 import { ContactSection } from '@/components/section/ContactSection'
 import { EducationAndExperiencesSection } from '@/components/section/EducationAndExperiencesSection'
 import { ProfileSection } from '@/components/section/ProfileSection'
@@ -8,13 +8,33 @@ import { SkillsSection } from '@/components/section/SkillsSection'
 
 export default function Home() {
   return (
-    <>
-      <ProfileSection />
-      <SkillsSection />
-      <ProjectSection />
-      <EducationAndExperiencesSection />
-      <ContactSection />
-      <div className="mb-20" />
-    </>
+    <div className="lg:flex lg:flex-row">
+      <div className="lg:w-3/12 lg:sticky top-0 lg:h-screen overflow-y-auto ">
+        <ProfileSection />
+      </div>
+      <div className="lg:w-9/12">
+        <SkillsSection />
+        <ProjectSection />
+        <EducationAndExperiencesSection />
+        <ContactSection />
+        <div className="mb-20 lg:hidden" />
+      </div>
+    </div>
   )
+}
+
+{
+  /* <div className="grid lg:grid-cols-3">
+<div className="lg:row-span-4">
+  <ProfileSection />
+</div>
+
+<div className="lg:col-span-2 lg:row-span-8">
+  <SkillsSection />
+  <ProjectSection />
+  <EducationAndExperiencesSection />
+  <ContactSection />
+  <div className="mb-20" />
+</div>
+</div> */
 }
