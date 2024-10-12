@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .section-style {
-  @apply bg-gray-800 m-4 p-4 space-y-4 rounded-3xl;
+  @apply bg-gray-800 m-4 p-4 space-y-4 2xl:m-6 2xl:p-6 2xl:space-y-6 rounded-3xl;
 }

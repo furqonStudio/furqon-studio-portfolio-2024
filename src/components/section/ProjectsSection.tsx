@@ -31,7 +31,7 @@ export const ProjectSection = () => {
   return (
     <section className="section-style">
       <SectionTitle text="Project" />
-      <div className=" gap-4 grid md:grid-cols-2">
+      <div className="2xl:gap-6 gap-4 grid md:grid-cols-2">
         {Projects.map((project) => (
           <ProjectCard
             key={project.id}
