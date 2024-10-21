@@ -21,7 +21,7 @@ export const ProfileSection = () => {
           height={400}
           className="m-auto"
         />
-        <CustomButton text="Contact Me" />
+        <CustomButton text="CONTACT ME" />
       </div>
       <div className="space-y-2 text-center ">
         <p className="font-inter text-white 2xl:text-2xl">My Socials</p>

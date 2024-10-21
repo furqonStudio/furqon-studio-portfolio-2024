@@ -10,7 +10,7 @@ import { Timelines } from '../molecules/Timelines'
 export const EducationAndExperiencesSection = () => {
   return (
     <section className="section-style">
-      <SectionTitle text="Education & Experiences" />
+      <SectionTitle text="EDUCATION & EXPERIENCES" />
       <div className="grid md:grid-cols-2">
         <div className="">
           <div>

@@ -6,7 +6,7 @@ export const ContactSection = () => {
   return (
     <section className="section-style lg:hidden">
       <SectionTitle text="Let's Work Together!" />
-      <CustomButton text="Contact Me" />
+      <CustomButton text="CONTACT ME" />
       <SocialMedia />
     </section>
   )
