@@ -24,7 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       className={`${bgColor} md:row-span-2 h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 relative overflow-hidden`}
     >
       <h3
-        className={`font-gasoek text-xl text-center ${
+        className={`font-gasoek text-2xl text-center ${
           textLight && 'text-white'
         }`}
       >
