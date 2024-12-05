@@ -1,5 +1,10 @@
 'use client'
-import { LuFlame, LuFolder, LuHistory, LuUserCircle } from 'react-icons/lu'
+import {
+  LuBot,
+  LuBrainCog,
+  LuGalleryVerticalEnd,
+  LuGraduationCap,
+} from 'react-icons/lu'
 
 export const BottomNavbar = () => {
   const scrollToSection = (id: string, offset = -14) => {
@@ -21,28 +26,28 @@ export const BottomNavbar = () => {
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('profile')}
       >
-        <LuUserCircle size={24} />
+        <LuBot size={24} />
         <span className="hidden md:block ml-2">Profile</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('skills')}
       >
-        <LuFlame size={24} />
+        <LuBrainCog size={24} />
         <span className="hidden md:block ml-2">Skills</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('projects')}
       >
-        <LuFolder size={24} />
+        <LuGalleryVerticalEnd size={24} />
         <span className="hidden md:block ml-2">Projects</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('experiences')}
       >
-        <LuHistory size={24} />
+        <LuGraduationCap size={24} />
         <span className="hidden md:block ml-2">Experiences</span>
       </button>
     </div>

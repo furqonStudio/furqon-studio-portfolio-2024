@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Link
       href={'/projects'}
-      className={`${bgColor} md:row-span-2 h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 relative overflow-hidden`}
+      className={`${bgColor} md:row-span-2 h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 relative overflow-hidden hover:scale-95 duration-700 transition ease-in-out`}
     >
       <h3
         className={`font-gasoek text-2xl text-center ${
