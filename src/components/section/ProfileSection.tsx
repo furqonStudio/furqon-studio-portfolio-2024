@@ -23,7 +23,7 @@ export const ProfileSection = ({ id }: { id: string }) => {
         />
         <CustomButton text="CONTACT ME" />
       </div>
-      <div className="space-y-2 text-center ">
+      <div className="space-y-2 text-center">
         <p className="font-inter text-white 2xl:text-2xl">My Socials</p>
         <SocialMedia />
       </div>

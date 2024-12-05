@@ -8,7 +8,7 @@ import {
 
 export const SocialMedia = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="flex flex-wrap justify-center gap-4 pb-3">
       <Link
         href={'https://www.instagram.com/furqon.std/'}
         className="cursor-pointer w-10 h-10 bg-white rounded-2xl flex justify-center items-center hover:scale-95 transition ease-in-out duration-700"

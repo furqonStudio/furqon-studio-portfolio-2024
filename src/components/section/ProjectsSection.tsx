@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { ProjectCard } from '../molecules/ProjectCard'
 import { useState } from 'react'
 
@@ -27,7 +26,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
       title: 'Positivus',
       description: 'Slicing UI Website',
       bgColor: 'bg-blue-500',
-      imageClassName: 'left-1/2 w-64 translate-x-[-50%] top-28',
+      imageClassName: 'left-1/2 w-64 translate-x-[-50%] top-24',
       textLight: true,
     },
     {
