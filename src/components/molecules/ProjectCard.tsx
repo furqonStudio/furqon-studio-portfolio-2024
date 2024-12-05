@@ -8,6 +8,7 @@ interface ProjectCardProps {
   textLight?: boolean
   bgColor?: string
   imageClassName: string
+  className?: string // Tambahkan prop className
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,32 +18,33 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   bgColor = 'bg-yellow-400',
   textLight = false,
   imageClassName,
+  className = '', // Default ke string kosong
 }) => {
   return (
     <Link
       href={'/projects'}
-      className={`${bgColor} md:row-span-2 h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 relative overflow-hidden hover:scale-95 duration-700 transition ease-in-out`}
+      className={`${bgColor} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden hover:scale-95 duration-700 transition ease-in-out ${className}`}
     >
       <h3
-        className={`font-gasoek text-2xl text-center ${
+        className={`font-gasoek text-2xl md:text-xl text-center md:text-left ${
           textLight && 'text-white'
         }`}
       >
         {title}
       </h3>
       <p
-        className={`text-sm font-inter text-center   ${
+        className={`text-sm font-inter text-center md:text-left md:text-xs ${
           textLight && 'text-white'
         }`}
       >
         {description}
       </p>
       <Image
-        alt="project1"
+        alt={title}
         src={imageSrc}
         width={500}
         height={500}
-        className={`absolute rounded-xl ${imageClassName}`}
+        className={`absolute ${imageClassName}`}
       />
     </Link>
   )

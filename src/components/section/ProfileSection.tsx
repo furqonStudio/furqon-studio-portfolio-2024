@@ -7,9 +7,8 @@ export const ProfileSection = ({ id }: { id: string }) => {
     <section id={id} className="lg:mr-0 section-style">
       <div className="text-white text-center">
         <p className="font-gasoek text-4xl 2xl:text-6xl">
-          FURQON
-          <br />
-          AL-RASYID
+          <span className="block sm:inline">FURQON</span>
+          <span className="block sm:inline">AL-RASYID</span>
         </p>
         <p className="font-inter 2xl:text-2xl">Software Engineer</p>
       </div>
