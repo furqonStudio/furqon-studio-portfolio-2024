@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { CustomButton } from '../atomic/CustomButton'
 import { SocialMedia } from '../molecules/SocialMedia'
 
-export const ProfileSection = () => {
+export const ProfileSection = ({ id }: { id: string }) => {
   return (
-    <section className="lg:mr-0 section-style ">
+    <section id={id} className="lg:mr-0 section-style">
       <div className="text-white text-center">
         <p className="font-gasoek text-4xl 2xl:text-6xl">
           FURQON

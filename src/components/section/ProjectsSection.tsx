@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ProjectCard } from '../molecules/ProjectCard'
 import { useState } from 'react'
 
-export const ProjectSection = () => {
+export const ProjectSection = ({ id }: { id: string }) => {
   const projects = [
     {
       id: 1,
@@ -76,7 +76,7 @@ export const ProjectSection = () => {
   }
 
   return (
-    <section className="section-style">
+    <section id={id} className="section-style">
       <h2 className="text-white font-gasoek text-center text-3xl 2xl:text-5xl">
         PROJECTS
       </h2>

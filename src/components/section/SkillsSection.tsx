@@ -2,9 +2,9 @@ import { Skills } from '@/data/data'
 import Image from 'next/image'
 import { SectionTitle } from '../atomic/SectionTitle'
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ id }: { id: string }) => {
   return (
-    <section className="section-style">
+    <section id={id} className="section-style">
       <SectionTitle text="SKILLS" />
       <div className="grid grid-cols-2 gap-4 2xl:gap-6 mt-4 md:grid-cols-4">
         {Skills.map((skill) => (

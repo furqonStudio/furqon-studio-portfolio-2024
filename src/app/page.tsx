@@ -9,14 +9,14 @@ import { SkillsSection } from '@/components/section/SkillsSection'
 export default function Home() {
   return (
     <div className="lg:flex lg:flex-row">
-      <div className="lg:w-3/12 lg:sticky top-0 lg:h-screen overflow-y-auto ">
-        <ProfileSection />
+      <div className="lg:w-3/12 lg:sticky top-0 lg:h-screen overflow-y-auto">
+        <ProfileSection id="profile" />
       </div>
       <div className="lg:w-9/12">
-        <SkillsSection />
-        <ProjectSection />
-        <EducationAndExperiencesSection />
-        <ContactSection />
+        <SkillsSection id="skills" />
+        <ProjectSection id="projects" />
+        <EducationAndExperiencesSection id="experiences" />
+        <ContactSection id="contact" />
         <div className="mb-20 lg:hidden" />
       </div>
     </div>

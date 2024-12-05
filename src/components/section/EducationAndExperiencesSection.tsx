@@ -7,9 +7,9 @@ import Image from 'next/image'
 import { SectionTitle } from '../atomic/SectionTitle'
 import { Timelines } from '../molecules/Timelines'
 
-export const EducationAndExperiencesSection = () => {
+export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
   return (
-    <section className="section-style">
+    <section id={id} className="section-style">
       <SectionTitle text="EDUCATION & EXPERIENCES" />
       <div className="grid md:grid-cols-2">
         <div className="">
