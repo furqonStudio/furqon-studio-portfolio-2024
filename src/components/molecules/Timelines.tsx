@@ -5,13 +5,13 @@ export const Timelines = ({ timelines }) => {
         {timelines.map((timeline, index) => (
           <li className="ms-8 mb-8 last:mb-0 group" key={index}>
             <span className="absolute flex items-center justify-center size-4 rounded-full -start-2 group-hover:bg-red-600 group-hover:ring-4 ring-red-600 bg-gray-700 transition ease-in-out duration-700"></span>
-            <h3 className="2xl:text-xl mb-1 font-inter tracking-tight font-bold text-gray-200">
+            <h3 className="mb-1 font-inter tracking-tight font-bold text-gray-200">
               {timeline.title}
             </h3>
-            <p className="2xl:text-lg font-inter text-sm text-gray-400">
+            <p className="font-inter text-sm text-gray-400">
               {timeline.description}
             </p>
-            <time className="2xl:text-base font-inter text-xs text-gray-500">
+            <time className="font-inter text-xs text-gray-500">
               {timeline.timePeriod}
             </time>
           </li>

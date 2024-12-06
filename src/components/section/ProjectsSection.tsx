@@ -102,9 +102,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
 
   return (
     <section id={id} className="section-style">
-      <h2 className="text-white font-gasoek text-center text-3xl 2xl:text-5xl">
-        PROJECTS
-      </h2>
+      <h2 className="text-white font-gasoek text-center text-3xl">PROJECTS</h2>
       <div className="grid md:grid-cols-4 md:grid-rows-3 md:gap-4 gap-4">
         {projects
           .slice(0, isMdScreen ? projects.length : visibleCount)
