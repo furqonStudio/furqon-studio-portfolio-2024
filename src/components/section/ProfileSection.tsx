@@ -6,9 +6,10 @@ export const ProfileSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="lg:mr-0 section-style">
       <div className="text-white text-center">
-        <p className="font-gasoek text-4xl 2xl:text-6xl">
-          <span className="block sm:inline">FURQON</span>
-          <span className="block sm:inline"> AL-RASYID</span>
+        <p className="font-gasoek text-4xl lg:text-3xl 2xl:text-6xl">
+          <span className="inline">FURQON</span>
+          <span className="block sm:inline lg:hidden"> AL-RASYID</span>
+          <span className="hidden lg:block"> AL-RASYID</span>
         </p>
         <p className="font-inter 2xl:text-2xl">Software Engineer</p>
       </div>
