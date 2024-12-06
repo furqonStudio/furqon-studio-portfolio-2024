@@ -27,28 +27,28 @@ export const BottomNavbar = () => {
         onClick={() => scrollToSection('profile')}
       >
         <LuBot size={24} />
-        <span className="hidden md:block ml-2">Profile</span>
+        <span className="hidden md:block ml-2 font-inter">Profile</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('skills')}
       >
         <LuBrainCog size={24} />
-        <span className="hidden md:block ml-2">Skills</span>
+        <span className="hidden md:block ml-2 font-inter">Skills</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('projects')}
       >
         <LuGalleryVerticalEnd size={24} />
-        <span className="hidden md:block ml-2">Projects</span>
+        <span className="hidden md:block ml-2 font-inter">Projects</span>
       </button>
       <button
         className="text-white flex flex-row items-center"
         onClick={() => scrollToSection('experiences')}
       >
         <LuGraduationCap size={24} />
-        <span className="hidden md:block ml-2">Experiences</span>
+        <span className="hidden md:block ml-2 font-inter">Experiences</span>
       </button>
     </div>
   )
