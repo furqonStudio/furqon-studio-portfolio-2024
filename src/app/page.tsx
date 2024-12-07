@@ -1,5 +1,6 @@
 'use client'
 
+import { BottomNavbar } from '@/components/molecules/BottomNavbar'
 import { ContactSection } from '@/components/section/ContactSection'
 import { EducationAndExperiencesSection } from '@/components/section/EducationAndExperiencesSection'
 import { ProfileSection } from '@/components/section/ProfileSection'
@@ -19,6 +20,7 @@ export default function Home() {
         <ContactSection id="contact" />
         <div className="mb-20 lg:hidden" />
       </div>
+      <BottomNavbar />
     </div>
   )
 }

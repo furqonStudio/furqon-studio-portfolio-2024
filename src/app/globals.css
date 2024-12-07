@@ -6,6 +6,10 @@
   @apply bg-neutral-900 m-4 p-4 space-y-4 rounded-3xl;
 }
 
+.text-secondary {
+  @apply text-gray-400;
+}
+
 .fade-in {
   opacity: 1;
   transform: translateY(0);
