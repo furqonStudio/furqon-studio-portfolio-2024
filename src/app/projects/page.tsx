@@ -1,8 +1,8 @@
 const ProjectsPage = () => {
   return (
-    <div className="text-white p-8">
+    <div className="text-white p-8 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3">
       <div className="w-full bg-red-500 aspect-square rounded-3xl" />
-      <div className="mt-4">
+      <div className="mt-4 md:mt-0 lg:col-span-2">
         <h1 className="text-xl font-gasoek">Prelovnes</h1>
         <p className="text-sm text-justify font-inter text-gray-400 text-secondary">
           Prelovnes adalah aplikasi marketplace berbasis React Native yang
