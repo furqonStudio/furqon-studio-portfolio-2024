@@ -22,19 +22,3 @@ export default function Home() {
     </div>
   )
 }
-
-{
-  /* <div className="grid lg:grid-cols-3">
-<div className="lg:row-span-4">
-  <ProfileSection />
-</div>
-
-<div className="lg:col-span-2 lg:row-span-8">
-  <SkillsSection />
-  <ProjectSection />
-  <EducationAndExperiencesSection />
-  <ContactSection />
-  <div className="mb-20" />
-</div>
-</div> */
-}

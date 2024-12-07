@@ -1,11 +1,12 @@
 import { CustomButton } from '../atomic/CustomButton'
-import { SectionTitle } from '../atomic/SectionTitle'
 import { SocialMedia } from '../molecules/SocialMedia'
 
 export const ContactSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="section-style lg:hidden">
-      <SectionTitle text="Let's Work Together!" />
+      <h2 className="text-white font-gasoek text-center text-3xl">
+        Let&apos;s Work Together!
+      </h2>
       <CustomButton text="CONTACT ME" />
       <SocialMedia />
     </section>

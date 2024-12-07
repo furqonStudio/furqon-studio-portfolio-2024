@@ -4,13 +4,14 @@ import {
   workExperienceTimelines,
 } from '@/data/data'
 import Image from 'next/image'
-import { SectionTitle } from '../atomic/SectionTitle'
 import { Timelines } from '../molecules/Timelines'
 
 export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="section-style">
-      <SectionTitle text="EDUCATION & EXPERIENCES" />
+      <h2 className="text-white font-gasoek text-center text-3xl">
+        EDUCATION & EXPERIENCES
+      </h2>
       <div className="grid md:grid-cols-2">
         <div className="">
           <div>
