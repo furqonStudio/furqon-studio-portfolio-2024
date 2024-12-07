@@ -7,7 +7,35 @@ export const projects = [
     bgColor: 'bg-yellow-400',
     className: 'md:row-span-2',
     imageClassName:
-      'left-1/2  translate-x-[-50%] mt-8 w-52 rounded-xl md:mt-8 md:w-32 md:rounded-lg',
+      'left-1/2 translate-x-[-50%] mt-8 w-52 rounded-xl md:w-32 md:rounded-lg',
+    details: {
+      introduction:
+        'Prelovnes adalah aplikasi marketplace berbasis React Native yang dirancang khusus untuk mahasiswa Universitas Negeri Semarang. Aplikasi ini memungkinkan pengguna untuk membeli dan menjual barang bekas dengan fitur keamanan data transaksi menggunakan AES.',
+      features: [
+        'Pencarian Produk',
+        'Keamanan Data Transaksi',
+        'Notifikasi Real-Time',
+        'Autentikasi',
+      ],
+      technologies: [
+        {
+          category: 'Frontend',
+          tools: 'React Native, Tailwind CSS',
+        },
+        {
+          category: 'Backend',
+          tools: 'Supabase, AES Encryption',
+        },
+        {
+          category: 'Autentikasi',
+          tools: 'Clerk Expo',
+        },
+        {
+          category: 'Routing',
+          tools: 'Expo Router',
+        },
+      ],
+    },
   },
   {
     id: 2,
@@ -17,7 +45,7 @@ export const projects = [
     bgColor: 'bg-green-500',
     className: '',
     imageClassName:
-      'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:w-32 md:rounded-lg ',
+      'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:w-32 md:rounded-lg',
   },
   {
     id: 3,
@@ -25,8 +53,9 @@ export const projects = [
     title: 'everymindmap',
     description: 'Mindmap belajar ilmu pengetahuan',
     bgColor: 'bg-blue-500',
-    classname: 'md:col-span-2',
-    imageClassName: 'left-1/2 w-72 translate-x-[-50%] mt-8 rounded-xl md:mt-4',
+    className: 'md:col-span-2',
+    imageClassName:
+      'left-1/2 w-72 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:rounded',
     textLight: true,
   },
   {
@@ -35,9 +64,9 @@ export const projects = [
     title: 'Cheatsheet',
     description: 'Website cheatsheet belajar modern website',
     bgColor: 'bg-red-500',
-    className: 'md:col-span-2 h-44',
+    className: 'md:col-span-2 md:h-44',
     imageClassName:
-      'left-1/2 w-72 translate-x-[-50%] translate-y-[50%] rounded-2xl',
+      'left-1/2 w-72 translate-x-[-50%] translate-y-[50%] rounded-xl md:mt-4 md:rouned',
     textLight: true,
   },
   {
@@ -46,15 +75,19 @@ export const projects = [
     title: 'Macode.',
     description: 'Slicing UI Website',
     bgColor: 'bg-lime-400',
-    imageClassName: 'left-1/2 w-52 translate-x-[-50%] top-24',
+    className: 'md:row-span-2',
+    imageClassName:
+      'left-1/2 w-52 translate-x-[-50%]  rounded-xl mt-8 md:mt-4 md:w-32 md:rounded',
   },
   {
     id: 6,
     imageUrl: '/assets/projects/sipekat.png',
     title: 'Sipekat',
-    description: 'Slicing UI Website',
+    description: 'Manajemen Kendaraan',
     bgColor: 'bg-violet-600',
-    imageClassName: 'left-40 bottom-0 scale-[180%] rounded',
+    className: 'md:col-span-2',
+    imageClassName:
+      'mt-20 ml-24 scale-150 md:scale-100 rounded md:mt-4 md:ml-0',
     textLight: true,
   },
   {
@@ -62,9 +95,9 @@ export const projects = [
     imageUrl: '/assets/projects/positivus.png',
     title: 'Positivus',
     description: 'Slicing UI',
-    bgColor: 'bg-blue-600',
-    imageClassName: 'top-24 w-64 left-1/2 translate-x-[-50%] rounded-xl',
-    textLight: true,
+    bgColor: 'bg-yellow-400',
+    imageClassName:
+      'mt-8 w-64 left-1/2 translate-x-[-50%] rounded-xl md:mt-4 md:w-32 md:rounded',
   },
 ]
 

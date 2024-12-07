@@ -2,27 +2,29 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 interface ProjectCardProps {
+  id: number
   imageSrc: string
   title: string
   description: string
   textLight?: boolean
   bgColor?: string
   imageClassName: string
-  className?: string // Tambahkan prop className
+  className?: string
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   imageSrc,
   title,
   description,
   bgColor = 'bg-yellow-400',
   textLight = false,
   imageClassName,
-  className = '', // Default ke string kosong
+  className = '',
 }) => {
   return (
     <Link
-      href={'/projects'}
+      href={`/projects/${id}`}
       className={`${bgColor} ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden hover:scale-95 duration-700 transition ease-in-out `}
     >
       <h3
