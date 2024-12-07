@@ -1,4 +1,16 @@
-export const Timelines = ({ timelines }) => {
+import React from 'react'
+
+type TimelineItem = {
+  title: string
+  description: string
+  timePeriod: string
+}
+
+type TimelinesProps = {
+  timelines: TimelineItem[]
+}
+
+export const Timelines: React.FC<TimelinesProps> = ({ timelines }) => {
   return (
     <div className="p-4">
       <ol className="relative border-s border-gray-700">
