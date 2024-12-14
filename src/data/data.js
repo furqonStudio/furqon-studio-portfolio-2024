@@ -189,17 +189,17 @@ export const certificationTimelines = [
 
 export const workExperienceTimelines = [
   {
-    title: 'Web Developer',
+    title: 'Web Developer - Stechoq Academy',
     description: 'Create UI app design and build a website using wordpress',
     timePeriod: 'August 2023 – December 2023',
   },
   {
-    title: 'Education Engineer',
+    title: 'Education Engineer - Stechoq Academy',
     description: 'Create UI app design and build a website using wordpress',
     timePeriod: 'August 2023 – December 2023',
   },
   {
-    title: 'Web Developer & UI Designer',
+    title: 'Web Developer & UI Designer - Ardata',
     description: 'Create UI app design and build a website using wordpress',
     timePeriod: 'March 2023 – July 2023',
   },
