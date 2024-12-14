@@ -35,6 +35,11 @@ const config: Config = {
     'translate-y-[50%]',
     'scale-150',
     'rounded-md',
+
+    'mt-20',
+    'ml-24',
+    'md:scale-100',
+    'md:ml-0',
   ],
   theme: {
     extend: {

@@ -16,7 +16,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="text-white p-8 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+    <div className="max-w-[1280px] m-auto text-white p-8 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3">
       <div
         className={`w-full aspect-square rounded-3xl ${project.bgColor}`}
         style={{
