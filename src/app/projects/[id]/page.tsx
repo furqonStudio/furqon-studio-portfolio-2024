@@ -2,21 +2,26 @@
 import { projects } from '@/data/data'
 import Link from 'next/link'
 import { FaArrowCircleLeft } from 'react-icons/fa'
+import { LuArrowLeft } from 'react-icons/lu'
+import { RiNextjsFill } from 'react-icons/ri'
 import {
   SiClerk,
   SiExpo,
   SiReact,
   SiSupabase,
   SiTailwindcss,
+  SiWordpress,
 } from 'react-icons/si'
 
 const iconMap: Record<string, JSX.Element> = {
   'React Native': <SiReact className="text-4xl lg:text-5xl p-1" />,
   Expo: <SiExpo className="text-4xl lg:text-5xl p-1" />,
+  NextJS: <RiNextjsFill className="text-4xl lg:text-5xl p-1" />,
   Tailwind: <SiTailwindcss className="text-4xl lg:text-5xl p-1" />,
   Nativewind: <SiTailwindcss className="text-4xl lg:text-5xl p-1" />,
   Supabase: <SiSupabase className="text-4xl lg:text-5xl p-1" />,
   Clerk: <SiClerk className="text-4xl lg:text-5xl p-1" />,
+  Wordpress: <SiWordpress className="text-4xl lg:text-5xl p-1" />,
 }
 
 const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
@@ -37,14 +42,16 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
     <>
       <Link
         href={'/'}
-        className="text-red-600 flex flex-row items-center justify-center gap-2 font-inter my-8 hover:cursor-pointer"
+        className="hidden lg:flex text-white bg-red-600 w-fit px-4 py-2 rounded-2xl m-auto font-inter my-8 hover:cursor-pointer group overflow-hidden"
       >
-        <FaArrowCircleLeft className="text-2xl" />
-        <p>Back</p>
+        <div className="flex group-hover:animate-marquee">
+          <LuArrowLeft className="text-xl mr-2" />
+          <p className="text-sm">Back</p>
+        </div>
       </Link>
       <div className="max-w-[1280px] m-auto text-white p-8 md:grid md:grid-cols-2 md:gap-8 lg:gap-12">
         <div
-          className={`w-full aspect-[1/16] rounded-3xl ${project.bgColor}`}
+          className={`w-full aspect-[9/16] rounded-3xl ${project.bgColor}`}
           style={{
             backgroundImage: `url(${project.imageUrl})`,
             backgroundSize: 'contain',
@@ -52,7 +59,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
           }}
         />
 
-        <div className="mt-8 md:mt-0 md:sticky md:top-16 space-y-8 h-screen bg-red-600">
+        <div className="mt-8 md:mt-0 md:sticky md:top-16 space-y-8 h-fit p-4 ">
           <div>
             <h1 className="text-2xl font-gasoek lg:text-3xl">
               {project.title}

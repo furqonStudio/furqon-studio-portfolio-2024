@@ -29,6 +29,16 @@ export const projects = [
     className: '',
     imageClassName:
       'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:w-32 md:rounded-lg',
+    details: {
+      introduction:
+        'Xballacc merupakan sebuah toko aksesoris HP yang berada di Kecamatan Kaliwungu, Kendal. Website ini berfungsi sebagai platform informasi toko sekaligus e-commerce yang menampilkan berbagai produk yang dijual.',
+      features: [
+        'Katalog Produk',
+        'Pencarian Produk',
+        'Pesan Kilat ke Whatsapp',
+      ],
+      technologies: ['Wordpress'],
+    },
   },
   {
     id: 3,
