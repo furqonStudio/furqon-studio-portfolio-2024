@@ -17,24 +17,7 @@ export const projects = [
         'Notifikasi Real-Time',
         'Autentikasi',
       ],
-      technologies: [
-        {
-          category: 'Frontend',
-          tools: 'React Native, Tailwind CSS',
-        },
-        {
-          category: 'Backend',
-          tools: 'Supabase, AES Encryption',
-        },
-        {
-          category: 'Autentikasi',
-          tools: 'Clerk Expo',
-        },
-        {
-          category: 'Routing',
-          tools: 'Expo Router',
-        },
-      ],
+      technologies: ['React Native', 'Expo', 'Nativewind', 'Clerk', 'Supabase'],
     },
   },
   {
