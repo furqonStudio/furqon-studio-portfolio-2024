@@ -1,13 +1,13 @@
 'use client'
 import { projects } from '@/data/data'
 import Link from 'next/link'
-import { FaArrowCircleLeft } from 'react-icons/fa'
 import { LuArrowLeft } from 'react-icons/lu'
 import { RiNextjsFill } from 'react-icons/ri'
 import {
   SiClerk,
   SiExpo,
   SiReact,
+  SiShadcnui,
   SiSupabase,
   SiTailwindcss,
   SiWordpress,
@@ -16,11 +16,13 @@ import {
 const iconMap: Record<string, JSX.Element> = {
   'React Native': <SiReact className="text-4xl lg:text-5xl p-1" />,
   Expo: <SiExpo className="text-4xl lg:text-5xl p-1" />,
-  NextJS: <RiNextjsFill className="text-4xl lg:text-5xl p-1" />,
+  'Next JS': <RiNextjsFill className="text-4xl lg:text-5xl p-1" />,
+  'React JS': <SiReact className="text-4xl lg:text-5xl p-1" />,
   Tailwind: <SiTailwindcss className="text-4xl lg:text-5xl p-1" />,
   Nativewind: <SiTailwindcss className="text-4xl lg:text-5xl p-1" />,
   Supabase: <SiSupabase className="text-4xl lg:text-5xl p-1" />,
   Clerk: <SiClerk className="text-4xl lg:text-5xl p-1" />,
+  Shadcn: <SiShadcnui className="text-4xl lg:text-5xl p-1" />,
   Wordpress: <SiWordpress className="text-4xl lg:text-5xl p-1" />,
 }
 
@@ -80,14 +82,19 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
                 </p>
               </div>
 
-              <div>
-                <p className="mt-4 font-bold font-inter lg:text-lg">Fitur:</p>
-                <ul className="list-disc list-inside text-sm lg:text-base text-gray-400 font-inter">
-                  {project.details.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
+              {project.details.features &&
+                project.details.features.length > 0 && (
+                  <div>
+                    <p className="mt-4 font-bold font-inter lg:text-lg">
+                      Fitur:
+                    </p>
+                    <ul className="list-disc list-inside text-sm lg:text-base text-gray-400 font-inter">
+                      {project.details.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
               <div>
                 <p className="mt-4 font-bold font-inter lg:text-lg">

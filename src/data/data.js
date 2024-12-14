@@ -50,6 +50,12 @@ export const projects = [
     imageClassName:
       'left-1/2 w-72 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:rounded',
     textLight: true,
+    details: {
+      introduction:
+        'everymindmap adalah website yang menyediakan mind map atau peta konsep untuk berbagai bidang ilmu pengetahuan. Dengan adanya website ini, pengunjung dapat mengetahui arah atau urutan dalam belajar suatu bidang ilmu',
+      features: ['Figma Jamboard Embed'],
+      technologies: ['Next JS', 'Tailwind'],
+    },
   },
   {
     id: 4,
@@ -61,6 +67,12 @@ export const projects = [
     imageClassName:
       'left-1/2 w-72 translate-x-[-50%] translate-y-[50%] rounded-xl md:mt-4 md:rouned',
     textLight: true,
+    details: {
+      introduction:
+        'Cheatsheet merupakan website catatan atau contekan dalam belajar pengembangan website (untuk sementara).',
+      features: ['Pencarian Materi', 'Dropdown Catatan'],
+      technologies: ['Next JS', 'Shadcn'],
+    },
   },
   {
     id: 5,
@@ -71,6 +83,12 @@ export const projects = [
     className: 'md:row-span-2',
     imageClassName:
       'left-1/2 w-52 translate-x-[-50%]  rounded-xl mt-8 md:mt-4 md:w-32 md:rounded',
+    details: {
+      introduction:
+        'Macode. merupakan website belajar pemrograman. Website ini dibuat hanya untuk keperluan belajar slicing frontend web menggunakan React JS dan Tailwind CSS',
+      features: [],
+      technologies: ['React JS', 'Tailwind'],
+    },
   },
   {
     id: 6,
@@ -82,6 +100,12 @@ export const projects = [
     imageClassName:
       'mt-20 ml-24 scale-150 md:scale-100 rounded md:mt-4 md:ml-0',
     textLight: true,
+    details: {
+      introduction:
+        'Sipekat atau Sistem Informasi Perawatan Kendaraan Terpusat merupakan website untuk memantau kondisi kendaraan. Website ini masih dalam tahap pengembangan, sehingga saat ini belum digunakan secara publik',
+      features: ['Autentikasi', 'Integrasi Map', 'Pencarian'],
+      technologies: ['Next JS', 'Tailwind'],
+    },
   },
   {
     id: 7,
@@ -91,6 +115,12 @@ export const projects = [
     bgColor: 'bg-yellow-400',
     imageClassName:
       'mt-8 w-64 left-1/2 translate-x-[-50%] rounded-xl md:mt-4 md:w-32 md:rounded',
+    details: {
+      introduction:
+        'Website hasil belajar slicing UI dari figma. Belajar membuat website responsive from scratch menggunakan React JS dan Tailwind CSS',
+      features: [],
+      technologies: ['React JS', 'Tailwind'],
+    },
   },
 ]
 
