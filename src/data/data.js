@@ -59,19 +59,19 @@ export const projects = [
   },
   {
     id: 4,
-    imageUrl: '/assets/projects/everymindmap.png',
-    title: 'Cheatsheet',
-    description: 'Website cheatsheet belajar modern website',
+    imageUrl: '/assets/projects/artharupa.png',
+    title: 'Artharupa Logam',
+    description: 'Website Perajin Logam',
     bgColor: 'bg-red-500',
     className: 'md:col-span-2 md:h-44',
     imageClassName:
-      'left-1/2 w-72 translate-x-[-50%] translate-y-[50%] rounded-xl md:mt-4 md:rouned',
+      'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4  md:rounded-lg',
     textLight: true,
     details: {
       introduction:
-        'Cheatsheet merupakan website catatan atau contekan dalam belajar pengembangan website (untuk sementara).',
-      features: ['Pencarian Materi', 'Dropdown Catatan'],
-      technologies: ['Next JS', 'Shadcn'],
+        'Website perajin yang memproduksi berbagai macam kerajinan dari bahan tembaga, kuningan, aluminium dan lain-lain.',
+      features: ['Profil Perusahaan'],
+      technologies: ['Wordpress'],
     },
   },
   {
@@ -112,9 +112,10 @@ export const projects = [
     imageUrl: '/assets/projects/positivus.png',
     title: 'Positivus',
     description: 'Slicing UI',
-    bgColor: 'bg-yellow-400',
+    bgColor: 'bg-blue-500',
     imageClassName:
       'mt-8 w-64 left-1/2 translate-x-[-50%] rounded-xl md:mt-4 md:w-32 md:rounded',
+    textLight: true,
     details: {
       introduction:
         'Website hasil belajar slicing UI dari figma. Belajar membuat website responsive from scratch menggunakan React JS dan Tailwind CSS',
