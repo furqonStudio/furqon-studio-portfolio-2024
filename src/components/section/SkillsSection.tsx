@@ -11,8 +11,14 @@ export const SkillsSection = ({ id }: { id: string }) => {
             className={`bg-neutral-800 hover:bg-red-600 hover:scale-95 duration-700 transition ease-in-out p-6 rounded-2xl flex flex-col items-center justify-center`}
             key={skill.id}
           >
-            <Image alt="skill" src={skill.imageUrl} width={300} height={300} />
-            <p className="font-inter text-center font-bold text-white tracking-tight">
+            <Image
+              alt="skill"
+              src={skill.imageUrl}
+              width={300}
+              height={300}
+              className="p-2"
+            />
+            <p className="font-inter font-bold text-center text-sm text-white">
               {skill.name}
             </p>
           </div>

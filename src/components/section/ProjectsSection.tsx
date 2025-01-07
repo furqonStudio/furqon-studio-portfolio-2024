@@ -49,7 +49,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
         <div className="text-center mt-4">
           <button
             onClick={handleShowMore}
-            className="px-4 py-2 bg-red-600 text-white text-xs rounded-2xl"
+            className="px-4 py-2 bg-red-600 text-white text-xs rounded-2xl font-inter"
           >
             {visibleCount === projects.length ? 'Show Less' : 'Show More'}
           </button>

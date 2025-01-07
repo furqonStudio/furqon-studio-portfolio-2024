@@ -49,7 +49,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
         >
           <div className="flex group-hover:animate-marquee items-center">
             <LuArrowLeft className="text-lg md:text-xl mr-2" />
-            <p className="text-xs md:text-sm">Back</p>
+            <p className="text-xs md:text-sm font-inter">Back</p>
           </div>
         </Link>
         <div

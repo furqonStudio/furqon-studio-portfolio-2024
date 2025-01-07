@@ -6,11 +6,11 @@ export const ProfileSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="lg:mr-0 section-style">
       <div className="text-white text-center">
-        <p className="font-gasoek text-4xl lg:text-3xl">
+        <h1 className="font-gasoek text-4xl">
           <span className="inline">FURQON</span>
           <span className="block sm:inline lg:hidden"> AL-RASYID</span>
           <span className="hidden lg:block"> AL-RASYID</span>
-        </p>
+        </h1>
         <p className="font-inter">Software Engineer</p>
       </div>
       <div className="space-y-4">
