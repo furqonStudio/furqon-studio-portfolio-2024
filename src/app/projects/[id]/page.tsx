@@ -41,19 +41,19 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <>
-      <Link
-        href={'/'}
-        className="hidden md:flex text-white bg-red-600 w-fit px-4 py-2 rounded-2xl m-auto font-inter my-8 hover:cursor-pointer group overflow-hidden"
-      >
-        <div className="flex group-hover:animate-marquee">
-          <LuArrowLeft className="text-xl mr-2" />
-          <p className="text-sm">Back</p>
-        </div>
-      </Link>
-      <div className="max-w-[1280px] m-auto text-white p-8 md:grid md:grid-cols-2 md:gap-8 lg:gap-12">
+    <div className="p-8">
+      <div className="max-w-3xl m-auto text-white">
+        <Link
+          href={'/'}
+          className="flex text-white bg-gray-800 w-fit px-4 py-2 rounded-2xl font-inter hover:cursor-pointer group overflow-hidden"
+        >
+          <div className="flex group-hover:animate-marquee items-center">
+            <LuArrowLeft className="text-lg md:text-xl mr-2" />
+            <p className="text-xs md:text-sm">Back</p>
+          </div>
+        </Link>
         <div
-          className={`w-full aspect-[9/16] rounded-3xl ${project.bgColor}`}
+          className={`w-full aspect-[16/9] rounded-3xl my-8 ${project.bgColor}`}
           style={{
             backgroundImage: `url(${project.imageUrl})`,
             backgroundSize: 'contain',
@@ -61,7 +61,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
           }}
         />
 
-        <div className="mt-8 md:mt-0 md:sticky md:top-16 space-y-8 h-fit p-4 ">
+        <div className=" md:sticky md:top-16 space-y-8 h-fit">
           <div>
             <h1 className="text-2xl font-gasoek lg:text-3xl">
               {project.title}
@@ -117,7 +117,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
           )}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
