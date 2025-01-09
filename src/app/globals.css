@@ -26,3 +26,11 @@
 .transform {
   transform: translateY(10px);
 }
+
+.profile-section {
+  scrollbar-width: none; /* Untuk Firefox */
+}
+
+.profile-section::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Opera */
+}

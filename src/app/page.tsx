@@ -10,7 +10,7 @@ import { SkillsSection } from '@/components/section/SkillsSection'
 export default function Home() {
   return (
     <div className="lg:flex lg:flex-row max-w-[1280px] m-auto">
-      <div className="lg:w-3/12 lg:sticky top-0 lg:h-screen lg:overflow-y-auto">
+      <div className="lg:w-3/12 lg:sticky top-0 lg:h-screen lg:overflow-y-auto profile-section">
         <ProfileSection id="profile" />
       </div>
       <div className="lg:w-9/12">
