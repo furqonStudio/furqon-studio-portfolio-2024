@@ -45,7 +45,7 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
       <div className="max-w-3xl m-auto text-white">
         <Link
           href={'/'}
-          className="flex text-white bg-gray-800 w-fit px-4 py-2 rounded-2xl font-inter hover:cursor-pointer group overflow-hidden"
+          className="flex text-white bg-neutral-800 w-fit px-4 py-2 rounded-2xl font-inter hover:cursor-pointer group overflow-hidden"
         >
           <div className="flex group-hover:animate-marquee items-center">
             <LuArrowLeft className="text-lg md:text-xl mr-2" />

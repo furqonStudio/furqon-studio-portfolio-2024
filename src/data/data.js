@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     imageUrl: '/assets/projects/prelovnes.jpeg',
     title: 'Prelovnes',
-    description: 'UNNES preloved marketplace mobile',
+    description: 'UNNES preloved marketplace mobile app',
     bgColor: 'bg-yellow-400',
     className: 'md:row-span-2',
     imageClassName:
@@ -24,7 +24,7 @@ export const projects = [
     id: 2,
     imageUrl: '/assets/projects/xballacc.png',
     title: 'Xballacc',
-    description: 'Website toko online aksesoris HP',
+    description: 'Website toko online aksesoris HP Kaliwungu Kendal',
     bgColor: 'bg-green-500',
     className: '',
     imageClassName:
