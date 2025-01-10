@@ -1,15 +1,26 @@
 import { Skills } from '@/data/data'
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 export const SkillsSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="section-style">
-      <h2 className="text-white font-gasoek text-center text-3xl">SKILLS</h2>
+      <motion.h2
+        className="text-white font-gasoek text-center text-3xl"
+        initial={{ opacity: 0, y: -20 }} // Keadaan awal: tidak terlihat dan sedikit naik
+        animate={{ opacity: 1, y: 0 }} // Keadaan akhir: terlihat dan di posisi normal
+        transition={{ duration: 0.5 }} // Durasi transisi
+      >
+        SKILLS
+      </motion.h2>
       <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-4">
-        {Skills.map((skill) => (
-          <div
-            className={`bg-neutral-800 hover:bg-red-600 hover:scale-95 duration-700 transition ease-in-out p-6 rounded-2xl flex flex-col items-center justify-center`}
+        {Skills.map((skill, index) => (
+          <motion.div
+            className="bg-neutral-800 hover:bg-red-600 hover:scale-95 duration-700 transition ease-in-out p-6 rounded-2xl flex flex-col items-center justify-center"
             key={skill.id}
+            initial={{ opacity: 0, y: 20 }} // Keadaan awal: tidak terlihat dan sedikit turun
+            animate={{ opacity: 1, y: 0 }} // Keadaan akhir: terlihat dan di posisi normal
+            transition={{ duration: 0.5, delay: index * 0.1 }} // Delay bertahap untuk efek yang lebih halus
           >
             <Image
               alt="skill"
@@ -21,7 +32,7 @@ export const SkillsSection = ({ id }: { id: string }) => {
             <p className="font-inter font-bold text-center text-sm text-white">
               {skill.name}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
