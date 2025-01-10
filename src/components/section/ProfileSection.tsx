@@ -1,14 +1,20 @@
 import Image from 'next/image'
 import { CustomButton } from '../atomic/CustomButton'
 import { SocialMedia } from '../molecules/SocialMedia'
+import { useInView } from 'react-intersection-observer'
 import { motion } from 'motion/react'
 
 export const ProfileSection = ({ id }: { id: string }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the section is visible
+    triggerOnce: true, // Only trigger once when it comes into view
+  })
+
   return (
-    <section id={id} className="lg:mr-0 section-style">
+    <section ref={ref} id={id} className="lg:mr-0 section-style">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }} // Trigger animation on visibility
         transition={{ duration: 0.6 }}
         className="text-white text-center"
       >
@@ -22,7 +28,9 @@ export const ProfileSection = ({ id }: { id: string }) => {
       <div className="space-y-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={
+            inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+          } // Trigger animation on visibility
           transition={{ duration: 0.6 }}
           className="m-auto"
         >
@@ -38,7 +46,7 @@ export const ProfileSection = ({ id }: { id: string }) => {
       </div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Trigger animation on visibility
         transition={{ duration: 0.6 }}
         className="space-y-2 text-center"
       >
