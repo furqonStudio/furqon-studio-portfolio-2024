@@ -47,40 +47,44 @@ export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
           }
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <div>
-            <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
-              <Image
-                src={'/assets/icons/education.png'}
-                alt="education"
-                width={48}
-                height={48}
-                className="lg:w-14 lg:h-14"
-              />
-              <p className="text-white text-lg font-inter font-black tracking-tighter">
-                Education
-              </p>
-            </div>
-            <Timelines timelines={educationTimelines} />
+          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
+            <Image
+              src={'/assets/icons/education.png'}
+              alt="education"
+              width={48}
+              height={48}
+              className="lg:w-14 lg:h-14"
+            />
+            <p className="text-white text-lg font-inter font-black tracking-tighter">
+              Education
+            </p>
           </div>
-          <div>
-            <div
-              className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4"
-              ref={certificationRef}
-            >
-              <Image
-                src={'/assets/icons/certificate.png'}
-                alt="certification"
-                width={48}
-                height={48}
-                className="lg:w-14 lg:h-14"
-              />
-              <p className="text-white text-lg font-inter font-black tracking-tighter">
-                Certifications
-              </p>
-            </div>
-            <Timelines timelines={certificationTimelines} />
-          </div>
+          <Timelines timelines={educationTimelines} />
         </motion.div>
+
+        <motion.div
+          ref={certificationRef}
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            certificationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 0.6, delay: 1 }}
+        >
+          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
+            <Image
+              src={'/assets/icons/certificate.png'}
+              alt="certification"
+              width={48}
+              height={48}
+              className="lg:w-14 lg:h-14"
+            />
+            <p className="text-white text-lg font-inter font-black tracking-tighter">
+              Certifications
+            </p>
+          </div>
+          <Timelines timelines={certificationTimelines} />
+        </motion.div>
+
         <motion.div
           ref={experienceRef}
           initial={{ opacity: 0, y: 20 }}
