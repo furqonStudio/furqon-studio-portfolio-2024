@@ -1,6 +1,5 @@
-import React from 'react'
-import { useInView } from 'react-intersection-observer'
-import { motion } from 'motion/react'
+import React, { useRef } from 'react'
+import { motion, useInView } from 'motion/react'
 
 type TimelineItem = {
   title: string
@@ -29,10 +28,8 @@ const fadeInVariants = {
 }
 
 export const Timelines: React.FC<TimelinesProps> = ({ timelines }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
+  const ref = useRef<HTMLOListElement>(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <div className="p-4">
@@ -43,13 +40,13 @@ export const Timelines: React.FC<TimelinesProps> = ({ timelines }) => {
             key={index}
             variants={fadeInVariants}
             initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            animate={isInView ? 'visible' : 'hidden'}
             custom={index}
           >
             <motion.span
               className="absolute flex items-center justify-center size-4 rounded-full -start-2 group-hover:bg-red-600 group-hover:ring-4 ring-red-600 bg-gray-700 transition ease-in-out duration-700"
-              initial={{ opacity: 0 }} // Ubah posisi awal icon
-              animate={inView ? { opacity: 1 } : { opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{
                 delay: 1.5 + index * 0.5,
               }}

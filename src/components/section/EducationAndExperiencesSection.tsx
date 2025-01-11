@@ -5,24 +5,22 @@ import {
 } from '@/data/data'
 import Image from 'next/image'
 import { Timelines } from '../molecules/Timelines'
-import { useInView } from 'react-intersection-observer'
-import { motion } from 'motion/react'
+import { motion, useInView } from 'motion/react'
+import { useRef } from 'react'
 
 export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
-  const { ref: educationRef, inView: educationInView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
+  // Refs for each section
+  const educationRef = useRef<HTMLDivElement>(null)
+  const certificationRef = useRef<HTMLDivElement>(null)
+  const experienceRef = useRef<HTMLDivElement>(null)
 
-  const { ref: certificationRef, inView: certificationInView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
+  // useInView for each section
+  const educationInView = useInView(educationRef, { once: true, amount: 0.2 })
+  const certificationInView = useInView(certificationRef, {
+    once: true,
+    amount: 0.2,
   })
-
-  const { ref: experienceRef, inView: experienceInView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
+  const experienceInView = useInView(experienceRef, { once: true, amount: 0.2 })
 
   return (
     <section id={id} className="section-style">
@@ -82,7 +80,7 @@ export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
             }
             transition={{ duration: 0.6, delay: 0.5 }} // Delay for Certifications
           >
-            <div className="flex flex-row items-center justify-center gap-2 lg:justify-start md:mt-6">
+            <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mt-6">
               <Image
                 src={'/assets/icons/certificate.png'}
                 alt="certification"

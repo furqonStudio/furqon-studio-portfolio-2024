@@ -5,19 +5,18 @@ import { motion, useInView } from 'motion/react'
 
 export const ProjectSection = ({ id }: { id: string }) => {
   const [visibleCount, setVisibleCount] = useState(3)
-  const [isMdScreen, setIsMdScreen] = useState(false) // Default to false
+  const [isMdScreen, setIsMdScreen] = useState(false)
 
   const ref = useRef(null)
   const buttonRef = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const isButtonInView = useInView(buttonRef, { once: true }) // Track button visibility
+  const isButtonInView = useInView(buttonRef, { once: true })
 
   useEffect(() => {
     const handleResize = () => {
       setIsMdScreen(window.innerWidth >= 768)
     }
 
-    // Run once to set initial value on the client side
     handleResize()
 
     window.addEventListener('resize', handleResize)

@@ -1,11 +1,11 @@
 import { Skills } from '@/data/data'
 import Image from 'next/image'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 
 export const SkillsSection = ({ id }: { id: string }) => {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <section ref={ref} id={id} className="section-style">
