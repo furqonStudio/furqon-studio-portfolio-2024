@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
 
 interface ProjectCardProps {
@@ -32,8 +32,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const [isHovered, setIsHovered] = useState(false)
-  const [isPressed, setIsPressed] = useState(false)
 
   return (
     <motion.div
@@ -44,8 +42,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       transition={{ duration: 0.5, delay }}
       whileHover={{
         scale: 1.05,
-        y: -10,
-        backgroundColor: bgColor,
+        y: -40,
         boxShadow: '0px 15px 30px rgba(0, 0, 0, 1)',
         transition: {
           type: 'spring',
@@ -53,29 +50,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           damping: 20,
         },
       }}
-      className={`bg-neutral-800  ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
-      style={{ backgroundColor: isPressed ? bgColor : undefined }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTapStart={() => setIsPressed(true)}
-      onTapCancel={() => setIsPressed(false)}
-      onTap={() => setIsPressed(false)}
+      className={`${bgColor} ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden hover:cursor-pointer`}
     >
       <Link href={`/projects/${id}`} passHref>
         <div>
           <motion.h3
-            className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left ${
-              isHovered ? 'text-black' : 'text-gray-200'
-            }`}
-            style={{ color: isPressed ? '#000000' : undefined }}
+            className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left text-black`}
           >
             {title}
           </motion.h3>
           <motion.p
-            className={`text-sm font-inter text-center md:text-left md:text-xs ${
-              isHovered ? 'text-black' : 'text-gray-300'
-            }`}
-            style={{ color: isPressed ? '#000000' : undefined }}
+            className={`text-sm font-inter text-center md:text-left md:text-xs text-gray-800`}
           >
             {description}
           </motion.p>

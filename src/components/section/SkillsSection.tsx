@@ -1,16 +1,11 @@
 import { Skills } from '@/data/data'
 import Image from 'next/image'
-import { motion, useInView, useDragControls } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 export const SkillsSection = ({ id }: { id: string }) => {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
-  const dragControls = useDragControls()
-
-  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
-    dragControls.start(event)
-  }
 
   return (
     <section ref={ref} id={id} className="section-style">
@@ -35,9 +30,6 @@ export const SkillsSection = ({ id }: { id: string }) => {
               boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.5)',
               transition: { duration: 0.3 },
             }}
-            onPointerDown={handlePointerDown} // Start dragging on pointer down
-            drag // Enable dragging
-            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} // Optional: set drag constraints
           >
             <Image
               alt={skill.name}

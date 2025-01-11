@@ -13,7 +13,7 @@ const config: Config = {
     'bg-blue-500',
     'bg-red-500',
     'bg-lime-400',
-    'bg-violet-600',
+    'bg-violet-500',
 
     // Class Names
     'md:row-span-2',

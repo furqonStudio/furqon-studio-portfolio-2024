@@ -4,7 +4,7 @@ export const projects = [
     imageUrl: '/assets/projects/prelovnes.jpeg',
     title: 'Prelovnes',
     description: 'UNNES preloved marketplace mobile app',
-    bgColor: '#FACC15',
+    bgColor: 'bg-yellow-400',
     className: 'md:row-span-2',
     imageClassName:
       'left-1/2 translate-x-[-50%] mt-8 w-52 rounded-xl md:w-32 md:rounded-lg',
@@ -25,7 +25,7 @@ export const projects = [
     imageUrl: '/assets/projects/xballacc.png',
     title: 'Xballacc',
     description: 'Website toko online aksesoris HP',
-    bgColor: '#22C55E',
+    bgColor: 'bg-green-500',
     className: '',
     imageClassName:
       'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:w-32 md:rounded-lg',
@@ -45,10 +45,11 @@ export const projects = [
     imageUrl: '/assets/projects/everymindmap.png',
     title: 'everymindmap',
     description: 'Mindmap belajar ilmu pengetahuan',
-    bgColor: '#3B82F6',
+    bgColor: 'bg-blue-500',
     className: 'md:col-span-2',
     imageClassName:
       'left-1/2 w-72 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:rounded',
+    textLight: true,
     details: {
       introduction:
         'everymindmap adalah website yang menyediakan mind map atau peta konsep untuk berbagai bidang ilmu pengetahuan. Dengan adanya website ini, pengunjung dapat mengetahui arah atau urutan dalam belajar suatu bidang ilmu',
@@ -61,10 +62,11 @@ export const projects = [
     imageUrl: '/assets/projects/artharupa.png',
     title: 'Artharupa Logam',
     description: 'Website Perajin Logam',
-    bgColor: '#EF4444',
+    bgColor: 'bg-red-500',
     className: 'md:col-span-2 md:h-44',
     imageClassName:
-      'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:rounded-lg',
+      'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4  md:rounded-lg',
+    textLight: true,
     details: {
       introduction:
         'Website perajin yang memproduksi berbagai macam kerajinan dari bahan tembaga, kuningan, aluminium dan lain-lain.',
@@ -77,10 +79,10 @@ export const projects = [
     imageUrl: '/assets/projects/macode.png',
     title: 'Macode.',
     description: 'Slicing UI Website',
-    bgColor: '#A3E635', // bg-lime-400
+    bgColor: 'bg-lime-400',
     className: 'md:row-span-2',
     imageClassName:
-      'left-1/2 w-52 translate-x-[-50%] rounded-xl mt-8 md:mt-4 md:w-32 md:rounded',
+      'left-1/2 w-52 translate-x-[-50%]  rounded-xl mt-8 md:mt-4 md:w-32 md:rounded',
     details: {
       introduction:
         'Macode. merupakan website belajar pemrograman. Website ini dibuat hanya untuk keperluan belajar slicing frontend web menggunakan React JS dan Tailwind CSS',
@@ -93,10 +95,11 @@ export const projects = [
     imageUrl: '/assets/projects/sipekat.png',
     title: 'Sipekat',
     description: 'Manajemen Kendaraan',
-    bgColor: '#8B5CF6', // bg-violet-600
+    bgColor: 'bg-violet-500',
     className: 'md:col-span-2',
     imageClassName:
       'mt-20 ml-24 scale-150 md:scale-100 rounded md:mt-4 md:ml-0',
+    textLight: true,
     details: {
       introduction:
         'Sipekat atau Sistem Informasi Perawatan Kendaraan Terpusat merupakan website untuk memantau kondisi kendaraan. Website ini masih dalam tahap pengembangan, sehingga saat ini belum digunakan secara publik',
@@ -109,9 +112,10 @@ export const projects = [
     imageUrl: '/assets/projects/positivus.png',
     title: 'Positivus',
     description: 'Slicing UI',
-    bgColor: '#818CF8',
+    bgColor: 'bg-blue-500',
     imageClassName:
       'mt-8 w-64 left-1/2 translate-x-[-50%] rounded-xl md:mt-4 md:w-32 md:rounded',
+    textLight: true,
     details: {
       introduction:
         'Website hasil belajar slicing UI dari figma. Belajar membuat website responsive from scratch menggunakan React JS dan Tailwind CSS',
