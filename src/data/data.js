@@ -9,6 +9,9 @@ export const projects = [
     imageClassName:
       'left-1/2 translate-x-[-50%] mt-8 w-52 rounded-xl md:w-32 md:rounded-lg',
     details: {
+      domain:
+        'https://play.google.com/store/apps/details?id=com.prelovnes&hl=id',
+      isPlaystore: true,
       introduction:
         'Prelovnes adalah aplikasi marketplace berbasis React Native yang dirancang khusus untuk mahasiswa Universitas Negeri Semarang. Aplikasi ini memungkinkan pengguna untuk membeli dan menjual barang bekas dengan fitur keamanan data transaksi menggunakan AES.',
       features: [
@@ -30,6 +33,7 @@ export const projects = [
     imageClassName:
       'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:w-32 md:rounded-lg',
     details: {
+      domain: 'xballacc.com',
       introduction:
         'Xballacc merupakan sebuah toko aksesoris HP yang berada di Kecamatan Kaliwungu, Kendal. Website ini berfungsi sebagai platform informasi toko sekaligus e-commerce yang menampilkan berbagai produk yang dijual.',
       features: [
@@ -51,6 +55,7 @@ export const projects = [
       'left-1/2 w-72 translate-x-[-50%] mt-8 rounded-xl md:mt-4 md:rounded',
     textLight: true,
     details: {
+      domain: 'everymindmap.vercel.app',
       introduction:
         'everymindmap adalah website yang menyediakan mind map atau peta konsep untuk berbagai bidang ilmu pengetahuan. Dengan adanya website ini, pengunjung dapat mengetahui arah atau urutan dalam belajar suatu bidang ilmu',
       features: ['Figma Jamboard Embed'],
@@ -68,6 +73,7 @@ export const projects = [
       'left-1/2 w-64 translate-x-[-50%] mt-8 rounded-xl md:mt-4  md:rounded-lg',
     textLight: true,
     details: {
+      domain: 'artharupalogam.com',
       introduction:
         'Website perajin yang memproduksi berbagai macam kerajinan dari bahan tembaga, kuningan, aluminium dan lain-lain.',
       features: ['Profil Perusahaan'],
@@ -84,6 +90,7 @@ export const projects = [
     imageClassName:
       'left-1/2 w-52 translate-x-[-50%]  rounded-xl mt-8 md:mt-4 md:w-32 md:rounded',
     details: {
+      domain: 'code-learning-macode.vercel.app',
       introduction:
         'Macode. merupakan website belajar pemrograman. Website ini dibuat hanya untuk keperluan belajar slicing frontend web menggunakan React JS dan Tailwind CSS',
       features: [],
@@ -101,6 +108,7 @@ export const projects = [
       'mt-20 ml-24 scale-150 md:scale-100 rounded md:mt-4 md:ml-0',
     textLight: true,
     details: {
+      domain: 'sipekat.vercel.app',
       introduction:
         'Sipekat atau Sistem Informasi Perawatan Kendaraan Terpusat merupakan website untuk memantau kondisi kendaraan. Website ini masih dalam tahap pengembangan, sehingga saat ini belum digunakan secara publik',
       features: ['Autentikasi', 'Integrasi Map', 'Pencarian'],
@@ -117,6 +125,7 @@ export const projects = [
       'mt-8 w-64 left-1/2 translate-x-[-50%] rounded-xl md:mt-4 md:w-32 md:rounded',
     textLight: true,
     details: {
+      domain: 'positivus-landing-page-seven.vercel.app',
       introduction:
         'Website hasil belajar slicing UI dari figma. Belajar membuat website responsive from scratch menggunakan React JS dan Tailwind CSS',
       features: [],

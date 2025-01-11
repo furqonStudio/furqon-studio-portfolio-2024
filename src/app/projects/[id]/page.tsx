@@ -69,8 +69,15 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
         width={500}
         height={500}
         style={{ objectFit: 'cover', objectPosition: 'top' }}
-        className="rounded-3xl aspect-video my-8"
+        className="rounded-3xl aspect-video mt-8 mb-4 w-full"
       />
+
+      <p
+        onClick={() => window.open(project.details.domain, '_blank')}
+        className="italic lg:text-lg text-gray-400 font-inter mb-8 hover:cursor-pointer hover:text-red-600 w-fit"
+      >
+        {project.details.isPlaystore ? 'Playstore' : project.details.domain}
+      </p>
 
       <div className="md:sticky md:top-16 space-y-8 h-fit">
         <div>
