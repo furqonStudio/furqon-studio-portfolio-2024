@@ -13,13 +13,13 @@ export const CustomButton: React.FC<CustomButtonProps> = ({ text }) => {
 
   return (
     <motion.div
-      ref={ref} // Attach the ref here
+      ref={ref}
       className="bg-red-600 p-4 text-lg text-center rounded-2xl font-gasoek text-white hover:cursor-pointer md:max-w-md md:m-auto"
-      initial={{ opacity: 0, scale: 0.8 }} // Initial state: invisible
-      animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }} // Animate based on inView
-      transition={{ duration: 0.6 }} // Transition duration
-      whileHover={{ scale: 1.1 }} // Scale up to 110% on hover
-      whileTap={{ scale: 0.95 }} // Scale down to 95% when pressed
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ backgroundColor: '#DC2626' }}
+      whileTap={{ scale: 0.95 }}
     >
       {text}
     </motion.div>

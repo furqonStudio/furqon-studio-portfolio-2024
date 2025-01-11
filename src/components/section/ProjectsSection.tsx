@@ -45,7 +45,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
       >
-        SKILLS
+        PROJECTS
       </motion.h2>
       <div className="grid md:grid-cols-4 md:grid-rows-3 md:gap-4 gap-4">
         {projects
