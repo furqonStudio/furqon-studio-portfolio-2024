@@ -37,6 +37,7 @@ export const SkillsSection = ({ id }: { id: string }) => {
               width={300}
               height={300}
               className="p-2"
+              draggable={false}
             />
             <p className="font-inter font-bold text-center text-sm text-white">
               {skill.name}

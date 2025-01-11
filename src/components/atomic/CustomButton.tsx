@@ -18,7 +18,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({ text }) => {
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
-      whileHover={{ backgroundColor: '#DC2626' }}
+      whileHover={{ backgroundColor: '#6D28D9' }}
       whileTap={{ scale: 0.95 }}
     >
       {text}
