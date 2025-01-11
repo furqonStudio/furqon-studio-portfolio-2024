@@ -24,7 +24,11 @@ export const SkillsSection = ({ id }: { id: string }) => {
             key={skill.id}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{
+              duration: 0.5,
+              ease: 'circIn',
+              delay: index * 0.1,
+            }}
             whileHover={{
               scale: 1.05,
               boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.5)',
