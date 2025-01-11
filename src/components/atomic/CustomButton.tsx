@@ -9,13 +9,18 @@ export const CustomButton: React.FC<CustomButtonProps> = ({ text }) => {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
+  const handleClick = () => {
+    window.open('https://wa.me/+6285225755956', '_blank')
+  }
+
   return (
     <motion.div
       ref={ref}
-      className={`bg-red-600 hover:bg-purple-600 transition-all duration-300 ease-in-out hover:scale-95 p-4 text-lg text-center rounded-2xl font-gasoek text-white hover:cursor-pointer md:max-w-md md:m-auto `}
+      className={`bg-red-600 hover:bg-purple-600 transition-all duration-300 ease-in-out hover:scale-95 p-4 text-lg text-center rounded-2xl font-gasoek text-white hover:cursor-pointer md:max-w-md md:m-auto`}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.5 }}
+      onClick={handleClick}
     >
       {text}
     </motion.div>
