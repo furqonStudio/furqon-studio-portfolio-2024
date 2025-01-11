@@ -60,8 +60,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
               bgColor={project.bgColor}
               className={project.className}
               imageClassName={project.imageClassName}
-              textLight={project.textLight}
-              delay={index * 0.1}
+              delay={index < projects.length - 3 ? index * 0.1 : 0}
             />
           ))}
       </div>

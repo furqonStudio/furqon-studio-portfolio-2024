@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'motion/react'
 
 interface ProjectCardProps {
@@ -20,30 +20,19 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-const hoverVariants = {
-  scale: 1.05, // Slightly scale up the card
-  y: -40, // Move the card up by 10 pixels
-  boxShadow: '0px 15px 30px rgba(0, 0, 0, 1)', // Add shadow
-  transition: {
-    type: 'spring',
-    stiffness: 300,
-    damping: 20,
-  },
-}
-
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   id,
   imageSrc,
   title,
   description,
   bgColor = 'bg-yellow-400',
-  textLight = false,
   imageClassName,
   className = '',
   delay = 0,
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
     <motion.div
@@ -52,32 +41,46 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       animate={isInView ? 'visible' : 'hidden'}
       variants={cardVariants}
       transition={{ duration: 0.5, delay }}
-      whileHover={hoverVariants}
-      className={`${bgColor} ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
+      whileHover={{
+        scale: 1.05,
+        y: -10,
+        backgroundColor: bgColor,
+        boxShadow: '0px 15px 30px rgba(0, 0, 0, 1)',
+        transition: {
+          type: 'spring',
+          stiffness: 300,
+          damping: 20,
+        },
+      }}
+      className={`bg-neutral-800 ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={`/projects/${id}`}>
-        <h3
-          className={`font-gasoek text-2xl md:text-xl text-center md:text-left ${
-            textLight ? 'text-white' : ''
-          }`}
-        >
-          {title}
-        </h3>
-        <p
-          className={`text-sm font-inter text-center md:text-left md:text-xs ${
-            textLight ? 'text-white' : ''
-          }`}
-        >
-          {description}
-        </p>
-        <Image
-          alt={title}
-          src={imageSrc}
-          width={500}
-          height={500}
-          draggable={false}
-          className={`absolute ${imageClassName}`}
-        />
+      <Link href={`/projects/${id}`} passHref>
+        <div>
+          <motion.h3
+            className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left ${
+              isHovered ? 'text-black' : 'text-gray-200'
+            }`}
+          >
+            {title}
+          </motion.h3>
+          <motion.p
+            className={`text-sm font-inter text-center md:text-left md:text-xs ${
+              isHovered ? 'text-black' : 'text-gray-300'
+            }`}
+          >
+            {description}
+          </motion.p>
+          <Image
+            alt={title}
+            src={imageSrc}
+            width={500}
+            height={500}
+            draggable={false}
+            className={`absolute ${imageClassName}`}
+          />
+        </div>
       </Link>
     </motion.div>
   )
