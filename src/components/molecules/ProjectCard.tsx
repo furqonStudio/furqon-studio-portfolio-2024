@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
-import { motion, useInView, useDragControls } from 'motion/react' // Update import statement
+import { motion, useInView } from 'motion/react'
 
 interface ProjectCardProps {
   id: number
@@ -21,7 +21,9 @@ const cardVariants = {
 }
 
 const hoverVariants = {
-  scale: 1.05,
+  scale: 1.05, // Slightly scale up the card
+  y: -40, // Move the card up by 10 pixels
+  boxShadow: '0px 15px 30px rgba(0, 0, 0, 1)', // Add shadow
   transition: {
     type: 'spring',
     stiffness: 300,
@@ -42,11 +44,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const dragControls = useDragControls()
-
-  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
-    dragControls.start(event) // Start dragging
-  }
 
   return (
     <motion.div
@@ -56,9 +53,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       variants={cardVariants}
       transition={{ duration: 0.5, delay }}
       whileHover={hoverVariants}
-      drag
-      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} // Optional: set drag constraints
-      onPointerDown={handlePointerDown} // Start dragging on pointer down
       className={`${bgColor} ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
     >
       <Link href={`/projects/${id}`}>
