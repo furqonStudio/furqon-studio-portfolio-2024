@@ -33,6 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const [isHovered, setIsHovered] = useState(false)
+  const [isPressed, setIsPressed] = useState(false)
 
   return (
     <motion.div
@@ -52,9 +53,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           damping: 20,
         },
       }}
-      className={`bg-neutral-800 ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
+      className={`bg-neutral-800  ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden`}
+      style={{ backgroundColor: isPressed ? bgColor : undefined }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTapStart={() => setIsPressed(true)}
+      onTapCancel={() => setIsPressed(false)}
+      onTap={() => setIsPressed(false)}
     >
       <Link href={`/projects/${id}`} passHref>
         <div>
@@ -62,6 +67,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left ${
               isHovered ? 'text-black' : 'text-gray-200'
             }`}
+            style={{ color: isPressed ? '#000000' : undefined }}
           >
             {title}
           </motion.h3>
@@ -69,6 +75,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             className={`text-sm font-inter text-center md:text-left md:text-xs ${
               isHovered ? 'text-black' : 'text-gray-300'
             }`}
+            style={{ color: isPressed ? '#000000' : undefined }}
           >
             {description}
           </motion.p>
