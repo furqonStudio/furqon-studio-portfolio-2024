@@ -16,7 +16,7 @@ export const ProfileSection = ({ id }: { id: string }) => {
         transition={{ duration: 0.6 }}
         className="text-white text-center"
       >
-        <h1 className="font-gasoek text-4xl">
+        <h1 className="font-gasoek text-5xl lg:text-4xl">
           <span className="inline">FURQON</span>
           <span className="block sm:inline lg:hidden"> AL-RASYID</span>
           <span className="hidden lg:block"> AL-RASYID</span>
