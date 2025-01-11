@@ -14,6 +14,7 @@ import {
 } from 'react-icons/si'
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
+import Image from 'next/image'
 
 const iconMap: Record<string, JSX.Element> = {
   'React Native': <SiReact className="text-4xl lg:text-5xl p-1" />,
@@ -62,17 +63,13 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
         </div>
       </Link>
 
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 20 }} // Initial state
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate when in view
-        transition={{ duration: 0.5 }} // Transition duration
-        className={`w-full aspect-[16/9] rounded-3xl my-8 ${project.bgColor}`}
-        style={{
-          backgroundImage: `url(${project.imageUrl})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-        }}
+      <Image
+        src={project.imageUrl}
+        alt="Project Image"
+        width={500}
+        height={500}
+        style={{ objectFit: 'cover', objectPosition: 'top' }}
+        className="rounded-3xl aspect-video my-8"
       />
 
       <div className="md:sticky md:top-16 space-y-8 h-fit">
