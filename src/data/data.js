@@ -24,7 +24,7 @@ export const projects = [
     id: 2,
     imageUrl: '/assets/projects/xballacc.png',
     title: 'Xballacc',
-    description: 'Website toko online aksesoris HP Kaliwungu Kendal',
+    description: 'Website toko online aksesoris HP',
     bgColor: 'bg-green-500',
     className: '',
     imageClassName:

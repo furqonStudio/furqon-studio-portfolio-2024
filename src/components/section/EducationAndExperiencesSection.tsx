@@ -39,61 +39,75 @@ export const EducationAndExperiencesSection = ({ id }: { id: string }) => {
         EDUCATION & EXPERIENCES
       </motion.h2>
       <div className="grid md:grid-cols-2 gap-8">
+        {/* Combined Education and Certifications */}
         <motion.div
-          ref={educationRef}
           initial={{ opacity: 0, y: 20 }}
           animate={
-            educationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+            educationInView || certificationInView
+              ? { opacity: 1, y: 0 }
+              : { opacity: 0, y: 20 }
           }
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
-            <Image
-              src={'/assets/icons/education.png'}
-              alt="education"
-              width={48}
-              height={48}
-              className="lg:w-14 lg:h-14"
-            />
-            <p className="text-white text-lg font-inter font-black tracking-tighter">
-              Education
-            </p>
-          </div>
-          <Timelines timelines={educationTimelines} />
+          {/* Education Section */}
+          <motion.div
+            ref={educationRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={
+              educationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+            }
+            transition={{ duration: 0.6, delay: 0 }} // No delay for Education
+          >
+            <div className="flex flex-row items-center justify-center gap-2 lg:justify-start">
+              <Image
+                src={'/assets/icons/education.png'}
+                alt="education"
+                width={48}
+                height={48}
+                className="lg:w-14 lg:h-14"
+              />
+              <p className="text-white text-lg font-inter font-black tracking-tighter">
+                Education
+              </p>
+            </div>
+            <Timelines timelines={educationTimelines} />
+          </motion.div>
+
+          {/* Certifications Section with delayed animation */}
+          <motion.div
+            ref={certificationRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={
+              certificationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+            }
+            transition={{ duration: 0.6, delay: 0.5 }} // Delay for Certifications
+          >
+            <div className="flex flex-row items-center justify-center gap-2 lg:justify-start md:mt-6">
+              <Image
+                src={'/assets/icons/certificate.png'}
+                alt="certification"
+                width={48}
+                height={48}
+                className="lg:w-14 lg:h-14"
+              />
+              <p className="text-white text-lg font-inter font-black tracking-tighter">
+                Certifications
+              </p>
+            </div>
+            <Timelines timelines={certificationTimelines} />
+          </motion.div>
         </motion.div>
 
-        <motion.div
-          ref={certificationRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={
-            certificationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-          }
-          transition={{ duration: 0.6, delay: 1 }}
-        >
-          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
-            <Image
-              src={'/assets/icons/certificate.png'}
-              alt="certification"
-              width={48}
-              height={48}
-              className="lg:w-14 lg:h-14"
-            />
-            <p className="text-white text-lg font-inter font-black tracking-tighter">
-              Certifications
-            </p>
-          </div>
-          <Timelines timelines={certificationTimelines} />
-        </motion.div>
-
+        {/* Experience Section */}
         <motion.div
           ref={experienceRef}
           initial={{ opacity: 0, y: 20 }}
           animate={
             experienceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
           }
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6, delay: 1 }} // Adjust delay as needed
         >
-          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start mb-4">
+          <div className="flex flex-row items-center justify-center gap-2 lg:justify-start">
             <Image
               src={'/assets/icons/work.png'}
               alt="experience"

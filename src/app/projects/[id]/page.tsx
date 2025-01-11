@@ -12,6 +12,8 @@ import {
   SiTailwindcss,
   SiWordpress,
 } from 'react-icons/si'
+import { motion, useInView } from 'motion/react'
+import { useRef } from 'react'
 
 const iconMap: Record<string, JSX.Element> = {
   'React Native': <SiReact className="text-4xl lg:text-5xl p-1" />,
@@ -28,8 +30,10 @@ const iconMap: Record<string, JSX.Element> = {
 
 const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
   const { id } = params
-
   const project = projects.find((proj) => proj.id === Number(id))
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true }) // Track visibility of the main container
 
   if (!project) {
     return (
@@ -41,83 +45,84 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="p-8">
-      <div className="max-w-3xl m-auto text-white">
-        <Link
-          href={'/'}
-          className="flex text-white bg-neutral-800 w-fit px-4 py-2 rounded-2xl font-inter hover:cursor-pointer group overflow-hidden"
-        >
-          <div className="flex group-hover:animate-marquee items-center">
-            <LuArrowLeft className="text-lg md:text-xl mr-2" />
-            <p className="text-xs md:text-sm font-inter">Back</p>
-          </div>
-        </Link>
-        <div
-          className={`w-full aspect-[16/9] rounded-3xl my-8 ${project.bgColor}`}
-          style={{
-            backgroundImage: `url(${project.imageUrl})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-          }}
-        />
-
-        <div className=" md:sticky md:top-16 space-y-8 h-fit">
-          <div>
-            <h1 className="text-2xl font-gasoek lg:text-3xl">
-              {project.title}
-            </h1>
-            <p className="text-sm lg:text-base text-justify font-inter text-gray-400 text-secondary">
-              {project.description}
-            </p>
-          </div>
-
-          {project.details && (
-            <>
-              <div>
-                <p className="mt-4 font-bold font-inter lg:text-lg">
-                  Deskripsi:
-                </p>
-                <p className="text-sm lg:text-base text-gray-400 font-inter">
-                  {project.details.introduction}
-                </p>
-              </div>
-
-              {project.details.features &&
-                project.details.features.length > 0 && (
-                  <div>
-                    <p className="mt-4 font-bold font-inter lg:text-lg">
-                      Fitur:
-                    </p>
-                    <ul className="list-disc list-inside text-sm lg:text-base text-gray-400 font-inter">
-                      {project.details.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-              <div>
-                <p className="mt-4 font-bold font-inter lg:text-lg">
-                  Teknologi:
-                </p>
-                <div className="flex gap-4 text-gray-400">
-                  {project.details.technologies.map((tech, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      {iconMap[tech] || (
-                        <div className="text-gray-500 text-4xl lg:text-5xl p-1">
-                          ?
-                        </div>
-                      )}
-                      <p className="font-inter text-[8px]">{tech}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </>
-          )}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate when in view
+      transition={{ duration: 0.5 }}
+      className="max-w-3xl m-auto text-white p-8"
+    >
+      <Link
+        href={'/'}
+        className="flex text-white bg-neutral-800 w-fit px-4 py-2 rounded-2xl font-inter hover:cursor-pointer group overflow-hidden"
+      >
+        <div className="flex group-hover:animate-marquee items-center">
+          <LuArrowLeft className="text-lg md:text-xl mr-2" />
+          <p className="text-xs md:text-sm font-inter">Back</p>
         </div>
+      </Link>
+
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }} // Initial state
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Animate when in view
+        transition={{ duration: 0.5 }} // Transition duration
+        className={`w-full aspect-[16/9] rounded-3xl my-8 ${project.bgColor}`}
+        style={{
+          backgroundImage: `url(${project.imageUrl})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+        }}
+      />
+
+      <div className="md:sticky md:top-16 space-y-8 h-fit">
+        <div>
+          <h1 className="text-2xl font-gasoek lg:text-3xl">{project.title}</h1>
+          <p className="text-sm lg:text-base text-justify font-inter text-gray-400 text-secondary">
+            {project.description}
+          </p>
+        </div>
+
+        {project.details && (
+          <>
+            <div>
+              <p className="mt-4 font-bold font-inter lg:text-lg">Deskripsi:</p>
+              <p className="text-sm lg:text-base text-gray-400 font-inter">
+                {project.details.introduction}
+              </p>
+            </div>
+
+            {project.details.features &&
+              project.details.features.length > 0 && (
+                <div>
+                  <p className="mt-4 font-bold font-inter lg:text-lg">Fitur:</p>
+                  <ul className="list-disc list-inside text-sm lg:text-base text-gray-400 font-inter">
+                    {project.details.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+            <div>
+              <p className="mt-4 font-bold font-inter lg:text-lg">Teknologi:</p>
+              <div className="flex gap-4 text-gray-400">
+                {project.details.technologies.map((tech, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    {iconMap[tech] || (
+                      <div className="text-gray-500 text-4xl lg:text-5xl p-1">
+                        ?
+                      </div>
+                    )}
+                    <p className="font-inter text-[8px]">{tech}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
