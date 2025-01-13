@@ -9,8 +9,7 @@ export const projects = [
     imageClassName:
       'left-1/2 translate-x-[-50%] mt-8 w-52 rounded-xl md:w-32 md:rounded-lg',
     details: {
-      domain:
-        'https://play.google.com/store/apps/details?id=com.prelovnes&hl=id',
+      domain: 'play.google.com/store/apps/details?id=com.prelovnes&hl=id',
       isPlaystore: true,
       introduction:
         'Prelovnes adalah aplikasi marketplace berbasis React Native yang dirancang khusus untuk mahasiswa Universitas Negeri Semarang. Aplikasi ini memungkinkan pengguna untuk membeli dan menjual barang bekas dengan fitur keamanan data transaksi menggunakan AES.',
