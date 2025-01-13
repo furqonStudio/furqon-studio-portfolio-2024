@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
+import { useRouter } from 'next/navigation'
 
 interface ProjectCardProps {
   id: number
@@ -32,9 +32,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const router = useRouter()
 
   return (
-    <motion.div
+    <motion.a
       ref={ref}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
@@ -51,29 +52,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         },
       }}
       className={`${bgColor} ${className} h-full rounded-2xl aspect-square md:aspect-auto py-4 px-8 md:p-4 relative overflow-hidden hover:cursor-pointer`}
+      onClick={(e) => {
+        e.preventDefault()
+        router.push(`/projects/${id}`)
+      }}
     >
-      <Link href={`/projects/${id}`} passHref>
-        <div>
-          <motion.h3
-            className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left text-black`}
-          >
-            {title}
-          </motion.h3>
-          <motion.p
-            className={`text-sm font-inter text-center md:text-left md:text-xs text-gray-800`}
-          >
-            {description}
-          </motion.p>
-          <Image
-            alt={title}
-            src={imageSrc}
-            width={500}
-            height={500}
-            draggable={false}
-            className={`absolute ${imageClassName}`}
-          />
-        </div>
-      </Link>
-    </motion.div>
+      <motion.div>
+        <motion.h3
+          className={`font-inter font-black tracking-tight text-2xl md:text-xl text-center md:text-left text-black`}
+        >
+          {title}
+        </motion.h3>
+        <motion.p
+          className={`text-sm font-inter text-center md:text-left md:text-xs text-gray-800`}
+        >
+          {description}
+        </motion.p>
+        <Image
+          alt={title}
+          src={imageSrc}
+          width={500}
+          height={500}
+          draggable={false}
+          className={`absolute ${imageClassName}`}
+        />
+      </motion.div>
+    </motion.a>
   )
 }

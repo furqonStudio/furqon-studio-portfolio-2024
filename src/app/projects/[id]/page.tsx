@@ -73,7 +73,9 @@ const ProjectsDetailPage = ({ params }: { params: { id: string } }) => {
       />
 
       <p
-        onClick={() => window.open(project.details.domain, '_blank')}
+        onClick={() =>
+          window.open(`https://${project.details.domain}`, '_blank')
+        }
         className="italic lg:text-lg text-gray-400 font-inter mb-8 hover:cursor-pointer hover:text-red-600 w-fit"
       >
         {project.details.isPlaystore ? 'Playstore' : project.details.domain}
